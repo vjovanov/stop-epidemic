@@ -1,0 +1,13 @@
+{
+  "resources":[
+    {"pattern":"\\Qcom/gluonhq/charm/glisten/G_Blue_500_58x58.png\\E"}, 
+    {"pattern":"\\Qcom/gluonhq/charm/glisten/control/glisten.css\\E"}, 
+    {"pattern":"\\Qcom/gluonhq/charm/glisten/control/swatch_blue.css\\E"}, 
+    {"pattern":"\\Qcom/gluonhq/charm/glisten/control/theme_light.css\\E"}, 
+    {"pattern":"\\Qicon.png\\E"}, 
+    {"pattern":"\\Qorg/stoppandemic/style.css\\E"}, 
+    {"pattern":"\\Qorg/stoppandemic/views/main.css\\E"}, 
+    {"pattern":"\\Qorg/stoppandemic/views/main.fxml\\E"}
+  ],
+  "bundles":[]
+}

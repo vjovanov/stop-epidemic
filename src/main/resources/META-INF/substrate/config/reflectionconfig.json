@@ -1,0 +1,94 @@
+[
+  {
+    "name":"com.gluonhq.charm.glisten.visual.MaterialDesignIcon",
+    "methods":[
+      {"name":"valueOf","parameterTypes":["java.lang.String"] }
+    ]
+  }
+,
+  {
+    "name":"com.gluonhq.charm.glisten.control.Icon",
+    "methods":[
+      {"name":"<init>","parameterTypes":[] },
+      {"name":"<init>","parameterTypes":["com.gluonhq.charm.glisten.visual.MaterialDesignIcon"] },
+      {"name":"contentProperty","parameterTypes":[] },
+      {"name":"getContent","parameterTypes":[] },
+      {"name":"setContent","parameterTypes":["com.gluonhq.charm.glisten.visual.MaterialDesignIcon"] }
+    ]
+  }
+,
+  {
+    "name":"com.gluonhq.charm.glisten.control.SettingsPane",
+    "methods":[
+      {"name":"<init>","parameterTypes":[] },
+      {"name":"<init>","parameterTypes":["javafx.collections.ObservableList"] }
+    ]
+  },
+  {
+    "name":"java.lang.Runnable"
+  },
+  {
+    "name":"java.lang.String"
+  },
+  {
+    "name":"javafx.scene.control.Button",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"javafx.scene.control.Label",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"javafx.scene.control.Separator",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"javafx.scene.control.TextArea",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"javafx.scene.layout.ColumnConstraints",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"javafx.scene.layout.GridPane",
+    "allDeclaredFields":true,
+    "allDeclaredMethods":true
+  },
+  {
+    "name":"javafx.scene.layout.RowConstraints",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"javafx.scene.layout.VBox",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.stoppandemic.StopPandemic"
+  },
+  {
+    "name":"org.stoppandemic.settings.Settings",
+    "allDeclaredFields":true,
+    "allDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.gluonhq.charm.glisten.afterburner.GluonPresenter",
+    "allDeclaredFields":true,
+    "allDeclaredMethods":true
+  },
+  {
+    "name":"com.gluonhq.charm.glisten.mvc.View",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.gluonhq.impl.charm.glisten.control.skin.GlistenButtonSkin",
+    "allPublicConstructors":true
+  },
+  {
+    "name":"org.stoppandemic.views.MainPresenter",
+    "allDeclaredFields":true,
+    "allDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
+]

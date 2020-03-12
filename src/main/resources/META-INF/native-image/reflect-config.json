@@ -1,0 +1,69 @@
+[
+{
+  "name":"com.gluonhq.charm.glisten.afterburner.GluonPresenter",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.gluonhq.charm.glisten.mvc.View",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.gluonhq.impl.charm.glisten.control.skin.GlistenButtonSkin",
+  "allPublicConstructors":true
+},
+{
+  "name":"javafx.scene.control.Button",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.control.Label",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.control.Separator",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.control.TextArea",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.layout.ColumnConstraints",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.layout.GridPane",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.layout.RowConstraints",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.layout.VBox",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"org.stoppandemic.StopPandemic"
+},
+{
+  "name":"org.stoppandemic.settings.Settings",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"org.stoppandemic.views.MainPresenter",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+}
+]
