@@ -24,7 +24,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package org.stoppandemic;
+package org.stopepidemic;
 
 import com.gluonhq.attach.util.Constants;
 import com.gluonhq.charm.glisten.application.MobileApplication;
@@ -32,10 +32,10 @@ import com.gluonhq.charm.glisten.visual.Swatch;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import org.stoppandemic.views.AppViewManager;
+import org.stopepidemic.views.AppViewManager;
 
 
-public class StopPandemic extends MobileApplication {
+public class StopEpidemic extends MobileApplication {
 
     @Override
     public void init() {
@@ -48,8 +48,8 @@ public class StopPandemic extends MobileApplication {
         AppViewManager.registerDrawer(this);
         Swatch.BLUE.assignTo(scene);
 
-        scene.getStylesheets().add(StopPandemic.class.getResource("style.css").toExternalForm());
-        ((Stage) scene.getWindow()).getIcons().add(new Image(StopPandemic.class.getResourceAsStream("/icon.png")));
+        scene.getStylesheets().add(StopEpidemic.class.getResource("style.css").toExternalForm());
+        ((Stage) scene.getWindow()).getIcons().add(new Image(StopEpidemic.class.getResourceAsStream("/icon.png")));
     }
 
     public static void main(String[] args) {

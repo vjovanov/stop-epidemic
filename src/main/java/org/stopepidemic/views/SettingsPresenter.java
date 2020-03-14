@@ -24,26 +24,21 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package org.stoppandemic.views;
+package org.stopepidemic.views;
 
-import org.stoppandemic.StopPandemic;
-import org.stoppandemic.settings.Settings;
+import org.stopepidemic.StopEpidemic;
+import org.stopepidemic.settings.Settings;
 import com.gluonhq.charm.glisten.afterburner.GluonPresenter;
 import com.gluonhq.charm.glisten.animation.BounceInRightTransition;
 import com.gluonhq.charm.glisten.control.AppBar;
 import com.gluonhq.charm.glisten.control.SettingsPane;
-import com.gluonhq.charm.glisten.control.settings.DefaultOption;
-import com.gluonhq.charm.glisten.control.settings.Option;
-import com.gluonhq.charm.glisten.control.settings.OptionBase;
 import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
-import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
-import javafx.geometry.Orientation;
 
 import javax.inject.Inject;
 
-public class SettingsPresenter extends GluonPresenter<StopPandemic> {
+public class SettingsPresenter extends GluonPresenter<StopEpidemic> {
 
     @FXML
     private View settings;

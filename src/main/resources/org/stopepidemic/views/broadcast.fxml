@@ -37,7 +37,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<View fx:id="broadcastView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.stoppandemic.views.BroadcastPresenter">
+<View fx:id="broadcastView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.stopepidemic.views.BroadcastPresenter">
       <VBox BorderPane.alignment="CENTER">
          <children>
             <GridPane styleClass="grid" VBox.vgrow="ALWAYS">

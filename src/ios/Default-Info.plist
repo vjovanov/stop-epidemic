@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>org.stoppandemic.StopPandemic</string>
+	<string>org.stopepidemic.StopEpidemic</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleExecutable</key>
-	<string>beacons</string>
+	<string>stop-epidemic</string>
 	<key>CFBundleIconName</key>
 	<string>AppIcon</string>
 	<key>CFBundleName</key>
@@ -51,5 +51,7 @@
     <string>This app needs location services</string>
     <key>NSBluetoothAlwaysUsageDescription</key>
     <string>This app needs bluetooth services</string>
+    <key>UIBackgroundModes</key>
+    <string>bluetooth-central</string>
 </dict>
 </plist>
