@@ -9,9 +9,9 @@ public class Encounter {
     private static final long NANOS_IN_SEC = 1000000000;
     private static final long EXPIRE_PERIOD_NANOS = 3600 * NANOS_IN_SEC;
     private static final int SIGNAL_AVAILABLE_MARKER = -1;
-    public static final long SIGNAL_LOST_TIME = 60_000_000_000L;
+    private static final long SIGNAL_LOST_TIME = 60_000_000_000L;
 
-    private final String encounterID;
+    private final byte[] encounterID;
     private Map<Integer, Long> signalDuration;
     private Map<Proximity, Long> proximityDuration;
     private long lastEncounter;
@@ -19,7 +19,7 @@ public class Encounter {
     private int lastSignalStrength;
     private long timeSignalLost = -1;
 
-    public Encounter(String encounterID) {
+    public Encounter(byte[] encounterID) {
         this.encounterID = encounterID;
         this.signalDuration = new HashMap<>();
         this.proximityDuration = new HashMap<>();
@@ -86,7 +86,7 @@ public class Encounter {
         proximityDuration.put(proximity, lastValue + duration);
     }
 
-    public String getEncounterID() {
+    public byte[] getEncounterID() {
         return encounterID;
     }
 
@@ -100,8 +100,15 @@ public class Encounter {
 
     @Override
     public String toString() {
-        return encounterID + " -> I: " + proximityDuration.get(Proximity.IMMEDIATE) / NANOS_IN_SEC + "s " +
+        return byteArrayToHex(encounterID) + " -> I: " + proximityDuration.get(Proximity.IMMEDIATE) / NANOS_IN_SEC + "s " +
                 "N: " + proximityDuration.get(Proximity.NEAR) / NANOS_IN_SEC + "s " +
                 "F: " + proximityDuration.get(Proximity.FAR) / NANOS_IN_SEC + "s";
+    }
+
+    public static String byteArrayToHex(byte[] a) {
+        StringBuilder sb = new StringBuilder(a.length * 2);
+        for(byte b: a)
+            sb.append(String.format("%02x", b));
+        return sb.toString();
     }
 }

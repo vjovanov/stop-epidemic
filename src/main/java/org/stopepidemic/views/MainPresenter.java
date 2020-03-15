@@ -42,6 +42,9 @@ import org.stopepidemic.StopEpidemic;
 import org.stopepidemic.settings.Settings;
 
 import javax.inject.Inject;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Optional;
@@ -55,6 +58,9 @@ public class MainPresenter extends GluonPresenter<StopEpidemic> {
 
     private static final Random random = new Random();
     private static final int MAX_VERSION = 65535;
+
+    private MessageDigest digest;
+
     private final Map<String, Encounter> encounters = new ConcurrentHashMap<>();
 
     private Optional<BleService> bleService;
@@ -83,7 +89,11 @@ public class MainPresenter extends GluonPresenter<StopEpidemic> {
     private Timer timer = new Timer();
 
     public void initialize() {
-
+        try {
+            digest = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("SHA-256 not supported. The app must be closed.");
+        }
         settings.setMinor(random.nextInt(MAX_VERSION + 1));
         settings.setMajor(random.nextInt(MAX_VERSION + 1));
         bleService = BleService.create();
@@ -120,9 +130,10 @@ public class MainPresenter extends GluonPresenter<StopEpidemic> {
                 bleService.ifPresent(ble ->
                         ble.startScanning(new Configuration(settings.getUUID()),
                                 (ScanDetection t) -> javafx.application.Platform.runLater(() -> {
-                                    String encounterID = computeEncounterID(t.getMajor(), t.getMinor());
-                                    encounters.putIfAbsent(encounterID, new Encounter(encounterID));
-                                    Encounter encounter = encounters.get(encounterID);
+                                    byte[] encounterID = computeEncounterID(t.getMajor(), t.getMinor());
+                                    String encounterKey = new String(encounterID);
+                                    encounters.putIfAbsent(encounterKey, new Encounter(encounterID));
+                                    Encounter encounter = encounters.get(encounterKey);
                                     encounter.seen(t.getRssi(), t.getProximity());
 
                                     int[] counts = new int[Proximity.values().length];
@@ -159,12 +170,13 @@ public class MainPresenter extends GluonPresenter<StopEpidemic> {
 
     }
 
-    private String computeEncounterID(int major, int minor) {
+    private byte[] computeEncounterID(int major, int minor) {
         int[] uniqueEncounter = new int[]{settings.getMajor(), settings.getMinor(), major, minor};
+        // make the number stable across devices
         Arrays.sort(uniqueEncounter);
-        return String.valueOf(uniqueEncounter[0]) + uniqueEncounter[1] + uniqueEncounter[2] + uniqueEncounter[3];
+        String keyText = settings.getUUID() + "-" + uniqueEncounter[0] + uniqueEncounter[1] + uniqueEncounter[2] + uniqueEncounter[3];
+        return digest.digest(keyText.getBytes(StandardCharsets.UTF_8));
     }
-
 
 }
 

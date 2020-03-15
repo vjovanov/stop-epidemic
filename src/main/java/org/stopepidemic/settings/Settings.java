@@ -34,7 +34,7 @@ import javafx.beans.property.StringProperty;
 public class Settings {
 
     public static final String UUID = "0000DEAD-B644-4520-8F0C-720EAF059935";
-    public static final String ID = "EpidemicBeacon";
+    public static final String ID = "StopEpidemicBeacon";
 
     private final StringProperty uuid = new SimpleStringProperty(UUID);
 
