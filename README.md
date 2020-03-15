@@ -12,7 +12,8 @@ Every modern phone contains a Bluetooth Low Energy (BLE) chip. The BLE chip:
 This app does the following: 
 1. It creates a beacon with a preset ID ('0000DEAD-B644-4520-8F0C-720EAF059935') and periodically transmits a large random number that changes every day. The randomly generated number is 32 bits in width (0 to 4294967296). Every other phone can listen to this beacon and can get this random number.
 2. Listens to all beacons with the preset ID and memorizes all the encounters that happened. Every encounter is memorized by joining the random number of your app and the random number sent by the beacon of the person you encountered.
-3. When a person gets infected they submit all their IDs to a central publicly-available database of "infected" encounters. Everyone else can read the database to see if they have been exposed. Since all the numbers are random and changing no private information is leaked.4. Everyone can check if their encounters (stored on the phone) have been infected. If yes, they can follow instructions for their exposure level. Again, no private information is leaked as all the encounters (random number pairs) are stored on the phone. 
+3. When a person gets infected they submit all their IDs to a central publicly-available database of "infected" encounters. Everyone else can read the database to see if they have been exposed. Since all the numbers are random and changing no private information is leaked.
+4. Everyone can check if their encounters (stored on the phone) have been infected. If yes, they can follow instructions for their exposure level. Again, no private information is leaked as all the encounters (random number pairs) are stored on the phone. 
 
 ## What do we need for this to succeed?
 0. The app needs to be tested with a large number (approximately 100) of devices that are both Android and iOS. We need to be sure that BLE can account for all encounters properly. 
