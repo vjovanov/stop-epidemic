@@ -5,9 +5,9 @@
     {"pattern":"\\Qcom/gluonhq/charm/glisten/control/swatch_blue.css\\E"}, 
     {"pattern":"\\Qcom/gluonhq/charm/glisten/control/theme_light.css\\E"}, 
     {"pattern":"\\Qicon.png\\E"}, 
-    {"pattern":"\\Qorg/stoppandemic/style.css\\E"}, 
-    {"pattern":"\\Qorg/stoppandemic/views/main.css\\E"}, 
-    {"pattern":"\\Qorg/stoppandemic/views/main.fxml\\E"}
+    {"pattern":"\\Qorg/stopepidemic/style.css\\E"}, 
+    {"pattern":"\\Qorg/stopepidemic/views/main.css\\E"}, 
+    {"pattern":"\\Qorg/stopepidemic/views/main.fxml\\E"}
   ],
   "bundles":[]
 }

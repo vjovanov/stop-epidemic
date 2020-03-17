@@ -46,7 +46,7 @@ public class AppViewManager {
 
     public static final AppViewRegistry REGISTRY = new AppViewRegistry();
 
-    public static final AppView MAIN_VIEW = view("Stop Pandemic", MainPresenter.class, MaterialDesignIcon.BLUETOOTH_SEARCHING, SHOW_IN_DRAWER, HOME_VIEW, SKIP_VIEW_STACK);
+    public static final AppView MAIN_VIEW = view("Stop Epidemic", MainPresenter.class, MaterialDesignIcon.BLUETOOTH_SEARCHING, SHOW_IN_DRAWER, HOME_VIEW, SKIP_VIEW_STACK);
 
     private static AppView view(String title, Class<? extends GluonPresenter<?>> presenterClass, MaterialDesignIcon menuIcon, AppView.Flag... flags) {
         return REGISTRY.createView(name(presenterClass), title, presenterClass, menuIcon, flags);
@@ -63,7 +63,7 @@ public class AppViewManager {
     }
 
     public static void registerDrawer(MobileApplication app) {
-        NavigationDrawer.Header header = new NavigationDrawer.Header("Stop Pandemic",
+        NavigationDrawer.Header header = new NavigationDrawer.Header("Stop Epidemic",
                 "Track your exposure and help others",
                 new Avatar(21, new Image(AppViewManager.class.getResourceAsStream("/icon.png"))));
         Utils.buildDrawer(app.getDrawer(), header, REGISTRY.getViews());
