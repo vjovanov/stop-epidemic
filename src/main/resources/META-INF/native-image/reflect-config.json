@@ -54,15 +54,15 @@
   "allDeclaredMethods":true
 },
 {
-  "name":"org.stoppandemic.StopPandemic"
+  "name":"org.stopepidemic.StopEpidemic"
 },
 {
-  "name":"org.stoppandemic.settings.Settings",
+  "name":"org.stopepidemic.settings.Settings",
   "allDeclaredFields":true,
   "allDeclaredMethods":true
 },
 {
-  "name":"org.stoppandemic.views.MainPresenter",
+  "name":"org.stopepidemic.views.MainPresenter",
   "allDeclaredFields":true,
   "allDeclaredMethods":true
 }

@@ -17,7 +17,7 @@
         <attach.version>4.0.6-SNAPSHOT</attach.version>
         <mainClassName>org.stopepidemic.StopEpidemic</mainClassName>
         <javafx-maven-plugin-version>0.0.4</javafx-maven-plugin-version>
-        <client-maven-plugin-version>0.1.17</client-maven-plugin-version>
+        <client-maven-plugin-version>0.1.18-SNAPSHOT</client-maven-plugin-version>
     </properties>
 
     <dependencies>
@@ -93,6 +93,11 @@
             <artifactId>util</artifactId>
             <version>${attach.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.gluonhq.attach</groupId>
+            <artifactId>keyboard</artifactId>
+            <version>${attach.version}</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -142,6 +147,12 @@
                 <clientTarget>ios</clientTarget>
             </properties>
         </profile>
+        <profile>
+            <id>android</id>
+            <properties>
+                <clientTarget>android</clientTarget>
+            </properties>
+        </profile>
     </profiles>
 
     <build>
@@ -179,6 +190,7 @@
                         <list>lifecycle</list>
                         <list>statusbar</list>
                         <list>storage</list>
+                        <list>keyboard</list>
                     </attachList>
                     <reflectionList>
                         <list>javafx.fxml.FXMLLoader</list>
